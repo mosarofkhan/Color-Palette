@@ -7,7 +7,7 @@ import styles from './styles/ColorBoxStyles';
 class ColorBox extends Component {
   // eslint-disable-next-line react/static-property-placement
   static defaultProps = {
-    message: ['copied', 'copied', 'copied', 'copied', "copied", 'copied'],
+    message: ['copied', 'copied', 'copied', 'copied', 'copied', 'copied'],
   };
 
   constructor(props) {

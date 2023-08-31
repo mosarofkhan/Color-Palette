@@ -20,27 +20,12 @@ class App extends Component {
   };
 
   savePalette = (newPalette) => {
-    this.setState(
-      (state) => ({ palettes: [...state.palettes, newPalette] }),
-      () => {
-        const { palettes } = this.state;
-        localStorage.setItem('palettes', JSON.stringify(palettes));
-      }
-    );
+    this.setState((state) => ({ palettes: [...state.palettes, newPalette] }));
   };
 
   deletePalette = (id) => {
-    this.setState(
-      (state) => ({ palettes: state.palettes.filter((palette) => palette.id !== id) }),
-      () => {
-        const { palettes } = this.state;
-        localStorage.setItem('palettes', JSON.stringify(palettes));
-      }
-    );
+    this.setState((state) => ({ palettes: state.palettes.filter((palette) => palette.id !== id) }));
   };
-
-
-  
 
   render() {
     const { palettes } = this.state;
